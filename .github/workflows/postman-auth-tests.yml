@@ -28,8 +28,8 @@ jobs:
         env:
           API_KEY: ${{ secrets.API_KEY }}
           LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
-          BASIC_AUTH_PASSWORD: ${{ secrets.VALID_TOKEN_PWD }}
-          INVALID_BASIC_AUTH_PASSWORD: ${{ secrets.INVALID_TOKEN_PWD }}
+          VALID_TOKEN_PWD: ${{ secrets.VALID_TOKEN_PWD }}
+          INVALID_TOKEN_PWD: ${{ secrets.INVALID_TOKEN_PWD }}
         run: |
           newman run "collections/Postman Authentication Automation.postman_collection.json" \
             --env-var "api_key=$API_KEY" \
