@@ -1,0 +1,12 @@
+# Postman environment files
+*.postman_environment.json
+
+# Secrets and credentials
+.env
+.env.*
+
+# Generated reports
+reports/
+
+# Node dependencies
+node_modules/
