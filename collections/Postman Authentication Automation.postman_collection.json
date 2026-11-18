@@ -229,7 +229,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "const cookieJar = pm.cookies.jar();\r\n\r\ntry {\r\n    await cookieJar.clear(\"https://dummyjson.com\");\r\n\r\n    console.log(\"DummyJSON cookies cleared successfully\");\r\n\r\n} catch (error) {\r\n    console.error(\"Cookie clearing failed:\", error);\r\n}"
+              "const cookieJar = pm.cookies.jar();\r\n\r\ncookieJar.clear(\"https://dummyjson.com\", function (error) {\r\n    if (error) {\r\n        console.error(\"Cookie clearing failed:\", error);\r\n    } else {\r\n        console.log(\"DummyJSON cookies cleared successfully\");\r\n    }\r\n});"
             ]
           }
         }
